@@ -1,3 +1,4 @@
+/*------------------------------------------COMPLETE-----------------------------------*/
 console.log("Welcome to the game")
 
 function getComputerChoice() {
@@ -11,26 +12,37 @@ function getComputerChoice() {
 
         console.log(cChoice)
 }
-
+/*------------------------------------------------------------------------------------*/
 function getHumanChoice() {
     let hSelector = window.prompt("Do you want to play with Rock, Paper, or Scissors?")
-    if (hSelector === "") {              /*Create a for loop to iterate as many times as needed for this if statement */
+    const scissors = "scissors"
+    const paper = "paper"
+    const rock = "rock"
+
+    if (hSelector === "") {   /*Create a for loop to iterate as many times as needed for this if statement */
         window.alert("Please type in your choice")
         hSelector = window.prompt("Choose either Rock, Paper, or Scissors?")
-    } else if () { /*Test is scissors*/
-    
-    } else if () { /*Test is paper*/
-    
-    } else () { /*Test is rock*/
-    
+        if (hSelector == scissors) { /* need to test for upper and lower case*/
+            hChoice = "scissors";
+        } else if (hSelector == paper) { /* need to test for upper and lower case*/
+                hChoice = "paper";
+        } else /* need to test for upper and lower case*/
+            hChoice = "rock"
+
+        console.log(hChoice)
+
+    } else {
+        if (hSelector == scissors) { /* need to test for upper and lower case*/
+            hChoice = "scissors";
+        } else if (hSelector == paper) { /* need to test for upper and lower case*/
+                hChoice = "paper";
+        } else /* need to test for upper and lower case*/
+            hChoice = "rock"
+
+        console.log(hChoice)
     }
-
-
-    console.log(hSelector)
 }
 
-// create function to keep track of score
-
-
+/*---------------------------Calling functions-----------------------------------------*/
 getHumanChoice()
 getComputerChoice()
