@@ -1,0 +1,14 @@
+body {
+    align-items: center;
+    color: whitesmoke;
+    background-color: black;
+    text-align: center;
+}
+
+h1 {
+    text-decoration: underline;
+}
+
+p {
+    text-transform: capitalize;
+}
