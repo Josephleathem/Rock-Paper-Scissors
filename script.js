@@ -83,7 +83,7 @@ function playRound(humanChoice, computerChoice) {
 
 /*-----------------------------------WORKING------------------------------------------*/
 
-/*---------------------------Calling functions-----------------------------------------*/
+/*------------------------------------------------------------------------------------*/
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
