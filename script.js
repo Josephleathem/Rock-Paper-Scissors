@@ -18,9 +18,9 @@ function getHumanChoice() {
 
     let hSelected = hSelector.toLowerCase();
 
-    const scissors = "scissors"
-    const paper = "paper"
-    const rock = "rock"
+    let scissors = "scissors"
+    let paper = "paper"
+    let rock = "rock"
 
     if (hSelector === "") {
          while (hSelector == "") {
@@ -47,16 +47,46 @@ function getHumanChoice() {
 
         return hChoice
     }
+
 }
 
 /*-----------------------------------WORKING------------------------------------------*/
 function playRound(humanChoice, computerChoice) {
+    // let scissors = "scissors"
+    // let paper = "paper"
+    // let rock = "rock"
+
     let huChoice = humanChoice.toUpperCase();
     let cuChoice = computerChoice.toUpperCase();
 
-
     console.log(`You have chosen: ${huChoice}!`)
     console.log(`The computers choice was: ${cuChoice}!`)
+
+    if (humanChoice == computerChoice) {
+        console.log("It's a tie")
+    } else {
+        // come up with statements for every scenario of wins and losses
+        console.log("they are different")
+    }
+
+    // if (humanChoice == scissors) {
+    //     humanSelector = 3
+    // } else if (humanChoice == paper) {
+    //     humanSelector = 1
+    // } else if (humanChoice == rock) 
+    //     humanSelector = 2
+
+    // if (computerChoice == scissors) {
+    //     computerSelector = 3
+    // } else if (computerChoice == paper) {
+    //     computerSelector = 1
+    // } else if (computerChoice == rock) 
+    //     computerSelector = 2
+    
+
+
+    // console.log(humanSelector)
+    // console.log(computerSelector)
 }
 
 const humanSelection = getHumanChoice();
