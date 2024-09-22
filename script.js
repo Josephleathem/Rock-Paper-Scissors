@@ -22,21 +22,21 @@ function getHumanChoice() {
     if (hSelector === "") {   /*Create a for loop to iterate as many times as needed for this if statement */
         window.alert("Please type in your choice")
         hSelector = window.prompt("Choose either Rock, Paper, or Scissors?")
-        if (hSelector == scissors) { /* need to test for upper and lower case*/
+        if (hSelector == scissors) { 
             hChoice = "scissors";
-        } else if (hSelector == paper) { /* need to test for upper and lower case*/
+        } else if (hSelector == paper) { 
                 hChoice = "paper";
-        } else /* need to test for upper and lower case*/
+        } else 
             hChoice = "rock"
 
         console.log(hChoice)
 
     } else {
-        if (hSelector == scissors) { /* need to test for upper and lower case*/
+        if (hSelector == scissors) { 
             hChoice = "scissors";
-        } else if (hSelector == paper) { /* need to test for upper and lower case*/
+        } else if (hSelector == paper) { 
                 hChoice = "paper";
-        } else /* need to test for upper and lower case*/
+        } else 
             hChoice = "rock"
 
         console.log(hChoice)
