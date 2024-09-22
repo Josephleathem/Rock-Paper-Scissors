@@ -15,28 +15,36 @@ function getComputerChoice() {
 /*------------------------------------------------------------------------------------*/
 function getHumanChoice() {
     let hSelector = window.prompt("Do you want to play with Rock, Paper, or Scissors?")
+
+    let hSelected = hSelector.toLowerCase();
+
     const scissors = "scissors"
     const paper = "paper"
     const rock = "rock"
 
-    if (hSelector === "") {   /*Create a for loop to iterate as many times as needed for this if statement */
-        window.alert("Please type in your choice")
-        hSelector = window.prompt("Choose either Rock, Paper, or Scissors?")
-        if (hSelector == scissors) { 
-            hChoice = "scissors";
-        } else if (hSelector == paper) { 
-                hChoice = "paper";
-        } else 
-            hChoice = "rock"
+    if (hSelector === "") {
+        hSelected = hSelector.toLowerCase();
+        console.log(hSelected)
 
+        while (hSelector == "") {
+            window.alert("Please type in your choice")
+            hSelector = window.prompt("Choose either Rock, Paper, or Scissors?")
+
+        } if (hSelector == scissors) { 
+            hChoice = "SS";
+        } else if (hSelector == paper) { 
+            hChoice = "PP";
+        } else if (hSelector == rock) 
+            hChoice = "RR"
+        
         console.log(hChoice)
 
     } else {
-        if (hSelector == scissors) { 
+        if (hSelected == scissors) { 
             hChoice = "scissors";
-        } else if (hSelector == paper) { 
-                hChoice = "paper";
-        } else 
+        } else if (hSelected == paper) {                // else block complete
+            hChoice = "paper";
+        } else if (hSelected == rock)
             hChoice = "rock"
 
         console.log(hChoice)
