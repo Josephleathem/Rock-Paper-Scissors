@@ -10,7 +10,7 @@ function getComputerChoice() {
         } else 
             cChoice = "rock";
 
-        console.log(cChoice)
+        return cChoice
 }
 
 function getHumanChoice() {
@@ -35,7 +35,7 @@ function getHumanChoice() {
         } else if (hSelected == rock) 
             hChoice = "rock"
         
-        console.log(hChoice)
+        return hChoice
 
     } else {
         if (hSelected == scissors) { 
@@ -45,17 +45,19 @@ function getHumanChoice() {
         } else if (hSelected == rock)
             hChoice = "rock"
 
-        console.log(hChoice)
+        return hChoice
     }
 }
 
 /*-----------------------------------WORKING------------------------------------------*/
-function playRound() {
+function playRound(humanChoice, computerChoice) {
     
+    console.log(humanChoice)
+    console.log(computerChoice)
 }
 
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
 /*---------------------------Calling functions-----------------------------------------*/
-getHumanChoice()
-getComputerChoice()
 
-playRound()
+playRound(humanSelection, computerSelection)
