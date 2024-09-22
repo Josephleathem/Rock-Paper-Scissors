@@ -50,47 +50,41 @@ function getHumanChoice() {
 
 }
 
-/*-----------------------------------WORKING------------------------------------------*/
 function playRound(humanChoice, computerChoice) {
-    // let scissors = "scissors"
-    // let paper = "paper"
-    // let rock = "rock"
+    let scissors = "scissors"
+    let paper = "paper"
+    let rock = "rock"
 
     let huChoice = humanChoice.toUpperCase();
     let cuChoice = computerChoice.toUpperCase();
 
     console.log(`You have chosen: ${huChoice}!`)
-    console.log(`The computers choice was: ${cuChoice}!`)
+    console.log(`The has chosen: ${cuChoice}!`)
 
     if (humanChoice == computerChoice) {
         console.log("It's a tie")
     } else {
-        // come up with statements for every scenario of wins and losses
-        console.log("they are different")
+        if (humanChoice == paper && computerChoice == rock) {
+            console.log(`You Win! ${huChoice} beats ${cuChoice}!`)
+        } else if (humanChoice == paper && computerChoice == scissors) {
+            console.log(`You Lose! ${cuChoice} beats ${huChoice}!`)
+        } else if (humanChoice == rock && computerChoice == paper) {
+            console.log(`You Lose! ${cuChoice} beats ${huChoice}!`)
+        } else if (humanChoice == rock && computerChoice == scissors) {
+            console.log(`You Win! ${huChoice} beats ${cuChoice}!`)
+        } else if (humanChoice == scissors && computerChoice == paper) {
+            console.log(`You Win! ${huChoice} beats ${cuChoice}!`)
+        } else if (humanChoice == scissors && computerChoice == rock) {
+            console.log(`You Lose! ${cuChoice} beats ${huChoice}!`)
+        }
     }
 
-    // if (humanChoice == scissors) {
-    //     humanSelector = 3
-    // } else if (humanChoice == paper) {
-    //     humanSelector = 1
-    // } else if (humanChoice == rock) 
-    //     humanSelector = 2
-
-    // if (computerChoice == scissors) {
-    //     computerSelector = 3
-    // } else if (computerChoice == paper) {
-    //     computerSelector = 1
-    // } else if (computerChoice == rock) 
-    //     computerSelector = 2
-    
-
-
-    // console.log(humanSelector)
-    // console.log(computerSelector)
 }
+
+/*-----------------------------------WORKING------------------------------------------*/
+
+/*---------------------------Calling functions-----------------------------------------*/
 
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
-/*---------------------------Calling functions-----------------------------------------*/
-
 playRound(humanSelection, computerSelection)
