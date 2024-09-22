@@ -12,7 +12,7 @@ function getComputerChoice() {
 
         console.log(cChoice)
 }
-/*------------------------------------------------------------------------------------*/
+
 function getHumanChoice() {
     let hSelector = window.prompt("Do you want to play with Rock, Paper, or Scissors?")
 
@@ -23,26 +23,24 @@ function getHumanChoice() {
     const rock = "rock"
 
     if (hSelector === "") {
-        hSelected = hSelector.toLowerCase();
-        console.log(hSelected)
-
-        while (hSelector == "") {
+         while (hSelector == "") {
             window.alert("Please type in your choice")
             hSelector = window.prompt("Choose either Rock, Paper, or Scissors?")
+            hSelected = hSelector.toLowerCase();
 
-        } if (hSelector == scissors) { 
-            hChoice = "SS";
-        } else if (hSelector == paper) { 
-            hChoice = "PP";
-        } else if (hSelector == rock) 
-            hChoice = "RR"
+        } if (hSelected == scissors) { 
+            hChoice = "scissors";
+        } else if (hSelected == paper) { 
+            hChoice = "paper";
+        } else if (hSelected == rock) 
+            hChoice = "rock"
         
         console.log(hChoice)
 
     } else {
         if (hSelected == scissors) { 
             hChoice = "scissors";
-        } else if (hSelected == paper) {                // else block complete
+        } else if (hSelected == paper) {                
             hChoice = "paper";
         } else if (hSelected == rock)
             hChoice = "rock"
@@ -50,6 +48,9 @@ function getHumanChoice() {
         console.log(hChoice)
     }
 }
+
+/*-----------------------------------WORKING------------------------------------------*/
+
 
 /*---------------------------Calling functions-----------------------------------------*/
 getHumanChoice()
