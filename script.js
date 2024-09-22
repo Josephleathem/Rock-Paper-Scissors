@@ -38,11 +38,11 @@ function getHumanChoice() {
         return hChoice
 
     } else {
-        if (hSelected == scissors) { 
-            hChoice = "scissors";
-        } else if (hSelected == paper) {                
+        if (hSelected == scissors) {
+            hChoice = "scissors";  
+        } else if (hSelected == paper) {
             hChoice = "paper";
-        } else if (hSelected == rock)
+        } else if (hSelected == rock) 
             hChoice = "rock"
 
         return hChoice
@@ -51,9 +51,12 @@ function getHumanChoice() {
 
 /*-----------------------------------WORKING------------------------------------------*/
 function playRound(humanChoice, computerChoice) {
-    
-    console.log(humanChoice)
-    console.log(computerChoice)
+    let huChoice = humanChoice.toUpperCase();
+    let cuChoice = computerChoice.toUpperCase();
+
+
+    console.log(`You have chosen: ${huChoice}!`)
+    console.log(`The computers choice was: ${cuChoice}!`)
 }
 
 const humanSelection = getHumanChoice();
