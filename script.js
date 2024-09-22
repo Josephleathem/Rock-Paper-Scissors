@@ -50,8 +50,12 @@ function getHumanChoice() {
 }
 
 /*-----------------------------------WORKING------------------------------------------*/
-
+function playRound() {
+    
+}
 
 /*---------------------------Calling functions-----------------------------------------*/
 getHumanChoice()
 getComputerChoice()
+
+playRound()

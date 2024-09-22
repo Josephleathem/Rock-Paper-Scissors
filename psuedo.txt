@@ -1,22 +1,24 @@
 create function getComputerChoice
 use math.random to return a number
 create a condition test to assign 
-Rock 0-0.33, 
-paper 0.34 to 0.67, 
-scissors 0.68 to 1
+    Rock 0-0.33, 
+    paper 0.34 to 0.67,     
+    scissors 0.68 to 1
 console.log the result to test 
 
 create function getHumanChoice
-create a loop to iterate each empty response until an answer is given
-compare and assign string values /responses 
+    create a loop to iterate each empty response until an answer is given
+        compare and assign string values to responses 
 console.log the response 
 
-create two new variables for each score
+create two new variables humanScore and computerScore in global scope
 initialize them at 0 
 
-create playround function
-define the functions two parameters
-make human choice case insensitive
-write code for playround to console.log to declare winner and or losers and why
-increment the score variables
 
+
+
+create a function named playRound
+    define its two parameters as human choice and computer choice, Use these two parameters to take the human and computer choices as arguments.
+make human choice parameter case insensitive
+write code for playRound function to console.log value representing the round winner
+Increment the humanScore or computerScore variable based on the round winner.
