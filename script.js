@@ -94,29 +94,36 @@ function playRound(humanChoice, computerChoice) {
 
     if (win == 'yes'){
         humanScore++
+        console.log(" ")
+        console.log(`The new game scores are:
+            Human: ${humanScore}
+            Computer: ${computerScore}`)
     } else if (win == "no"){
         computerScore++
+        console.log(" ")
+        console.log(`The new game scores are:
+            Human: ${humanScore}
+            Computer: ${computerScore}`)
     } else if (win == 'no-one'){
-        return null
+        console.log(" ")
+        console.log(`The game scores are still:
+            Human: ${humanScore}
+            Computer: ${computerScore}`)
     }
-
-
-    console.log(" ")
-    console.log(`The new game scores are:
-        Human: ${humanScore}
-        Computer: ${computerScore}`)
 }
 
 /*-----------------------------------WORKING------------------------------------------*/
-// Increment the humanScore or computerScore variable based on the round winner. 
-    // create variables humanScore and computerScore
-    // initialize them at 0
-    //     create a loop to Increment the winners counter
+function playGame() {
+
+
+    
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+    playRound(humanSelection, computerSelection)
+}
 
 
 
 /*------------------------------------------------------------------------------------*/
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection)
+playGame()
