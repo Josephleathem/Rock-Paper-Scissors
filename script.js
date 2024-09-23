@@ -1,4 +1,5 @@
 /*------------------------------------------COMPLETE-----------------------------------*/
+console.log(" ")
 console.log("Welcome to the game of Rock Paper Scissors")
 console.log(" ")
 
@@ -64,35 +65,46 @@ function playRound(humanChoice, computerChoice) {
     console.log(" ")
 
     if (humanChoice == computerChoice) {
-        console.log(`It's a tie because ${huChoice} is equal to ${cuChoice}`)
+        console.log(`It's a tie this round! ${huChoice} is equal to ${cuChoice}`)
+        win = 'no-one'
     } else {
         if (humanChoice == paper && computerChoice == rock) {
-            console.log(`You Win! ${huChoice} beats ${cuChoice}!`)
+            console.log(`You Win this round! ${huChoice} beats ${cuChoice}!`)
             win = 'yes'
-            console.log(`Human win = ${win}`)
         } else if (humanChoice == paper && computerChoice == scissors) {
-            console.log(`You Lose! ${cuChoice} beats ${huChoice}!`)
+            console.log(`You Lose this round! ${cuChoice} beats ${huChoice}!`)
             win = "no"
-            console.log(`Human win = ${win}`)
         } else if (humanChoice == rock && computerChoice == paper) {
-            console.log(`You Lose! ${cuChoice} beats ${huChoice}!`)
+            console.log(`You Lose this round! ${cuChoice} beats ${huChoice}!`)
             win = "no"
-            console.log(`Human win = ${win}`)
         } else if (humanChoice == rock && computerChoice == scissors) {
-            console.log(`You Win! ${huChoice} beats ${cuChoice}!`)
+            console.log(`You Win this round! ${huChoice} beats ${cuChoice}!`)
             win = 'yes'
-            console.log(`Human win = ${win}`)
         } else if (humanChoice == scissors && computerChoice == paper) {
-            console.log(`You Win! ${huChoice} beats ${cuChoice}!`)
+            console.log(`You Win this round! ${huChoice} beats ${cuChoice}!`)
             win = 'yes'
-            console.log(`Human win = ${win}`)
         } else if (humanChoice == scissors && computerChoice == rock) {
-            console.log(`You Lose! ${cuChoice} beats ${huChoice}!`)
+            console.log(`You Lose this round! ${cuChoice} beats ${huChoice}!`)
             win = "no"
-            console.log(`Human win = ${win}`)
         }
     }
 
+    let humanScore = 0
+    let computerScore = 0 
+
+    if (win == 'yes'){
+        humanScore++
+    } else if (win == "no"){
+        computerScore++
+    } else if (win == 'no-one'){
+        return null
+    }
+
+
+    console.log(" ")
+    console.log(`The new game scores are:
+        Human: ${humanScore}
+        Computer: ${computerScore}`)
 }
 
 /*-----------------------------------WORKING------------------------------------------*/
