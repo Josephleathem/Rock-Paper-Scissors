@@ -1,5 +1,6 @@
 /*------------------------------------------COMPLETE-----------------------------------*/
-console.log("Welcome to the game")
+console.log("Welcome to the game of Rock Paper Scissors")
+console.log(" ")
 
 function getComputerChoice() {
     let cSelector = Math.random();
@@ -60,28 +61,47 @@ function playRound(humanChoice, computerChoice) {
 
     console.log(`You have chosen: ${huChoice}!`)
     console.log(`The has chosen: ${cuChoice}!`)
+    console.log(" ")
 
     if (humanChoice == computerChoice) {
-        console.log("It's a tie")
+        console.log(`It's a tie because ${huChoice} is equal to ${cuChoice}`)
     } else {
         if (humanChoice == paper && computerChoice == rock) {
             console.log(`You Win! ${huChoice} beats ${cuChoice}!`)
+            win = 'yes'
+            console.log(`Human win = ${win}`)
         } else if (humanChoice == paper && computerChoice == scissors) {
             console.log(`You Lose! ${cuChoice} beats ${huChoice}!`)
+            win = "no"
+            console.log(`Human win = ${win}`)
         } else if (humanChoice == rock && computerChoice == paper) {
             console.log(`You Lose! ${cuChoice} beats ${huChoice}!`)
+            win = "no"
+            console.log(`Human win = ${win}`)
         } else if (humanChoice == rock && computerChoice == scissors) {
             console.log(`You Win! ${huChoice} beats ${cuChoice}!`)
+            win = 'yes'
+            console.log(`Human win = ${win}`)
         } else if (humanChoice == scissors && computerChoice == paper) {
             console.log(`You Win! ${huChoice} beats ${cuChoice}!`)
+            win = 'yes'
+            console.log(`Human win = ${win}`)
         } else if (humanChoice == scissors && computerChoice == rock) {
             console.log(`You Lose! ${cuChoice} beats ${huChoice}!`)
+            win = "no"
+            console.log(`Human win = ${win}`)
         }
     }
 
 }
 
 /*-----------------------------------WORKING------------------------------------------*/
+// Increment the humanScore or computerScore variable based on the round winner. 
+    // create variables humanScore and computerScore
+    // initialize them at 0
+    //     create a loop to Increment the winners counter
+
+
 
 /*------------------------------------------------------------------------------------*/
 

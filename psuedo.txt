@@ -21,4 +21,9 @@ create a function named playRound
     define its two parameters as human choice and computer choice, Use these two parameters to take the human and computer choices as arguments.
 make human choice parameter case insensitive
 write code for playRound function to console.log value representing the round winner
+
 Increment the humanScore or computerScore variable based on the round winner.
+
+    create variables humanScore and computerScore
+    initialize them at 0
+        create a for loop to Increment the winners counter
