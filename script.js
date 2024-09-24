@@ -122,9 +122,9 @@ function playGame() {
     var gameCount = 0 
 
     do {
-        const computerSelection = getComputerChoice();
         const humanSelection = getHumanChoice();
-        playRound(humanSelection, computerSelection);s
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
         gameCount++;
 
         console.log(" ")
