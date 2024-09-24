@@ -132,9 +132,11 @@ function playGame() {
         tiedGames = (5 - (humanScore + computerScore))
 
         if (gameCount == 5 && humanScore > computerScore) {
-            console.log(`You won the game ${humanScore} to ${computerScore}, with ${tiedGames} tied games!!`)
+            console.log(`You won the game ${humanScore} to ${computerScore}, with ${tiedGames} tied rounds!!`)
         } else if (gameCount == 5 && computerScore > humanScore) {
-            console.log(`You lost the game ${computerScore} to ${humanScore}, with ${tiedGames} tied games!`)
+            console.log(`You lost the game ${computerScore} to ${humanScore}, with ${tiedGames} tied rounds!`)
+        } else if (gameCount == 5 && computerScore == humanScore) {
+            console.log(`It was a tied game ${computerScore} to ${humanScore}, with ${tiedGames} tied rounds!`)
         }
     } while (gameCount < 5)
         
