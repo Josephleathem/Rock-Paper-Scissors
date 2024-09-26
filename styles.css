@@ -12,3 +12,10 @@ h1 {
 p {
     text-transform: capitalize;
 }
+
+.gameInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
