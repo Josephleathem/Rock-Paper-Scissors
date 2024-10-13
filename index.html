@@ -12,11 +12,26 @@
         <h1>Rock-Paper-Scissors</h1>
     </div>
     <div class="body">
-        <p>This game is played via the console, Press F12 and navigate to the console then refresh this page.</p>
-        <br />
-        <div class="gameInfo">
+        <div class="game">
             <h3 id="welcome"></h3>
-            <p id="result"></p>
+            <div class="buttons">
+                <button id="rockButton">Rock</button>
+                <button id="paperButton">Paper</button>
+                <button id="scissorsButton">Scissors</button>
+            </div>
+            <div class="roundOutcomes">
+                <div class="selected">
+                    <p id="yourSelected"></p>
+                    <p id="computerSelected"></p>
+                </div>
+                <div class="roundResults">
+                    <p id="result"></p>
+                    <p id="roundScore"></p>
+                </div>
+                <div class="gameResults">
+                    <p id="gameResult"></p>
+                </div>
+            </div>
         </div>
     </div>
 </body>

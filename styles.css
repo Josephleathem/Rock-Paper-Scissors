@@ -13,9 +13,15 @@ p {
     text-transform: capitalize;
 }
 
-.gameInfo {
+.game {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.roundOutcomes {
+    display: flex;
+    flex-direction: column;
+    
 }

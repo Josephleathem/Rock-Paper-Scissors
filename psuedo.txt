@@ -37,3 +37,9 @@ Play 5 rounds by calling playRound 5 times.
         create while loop that playsRound while humanScore and computerScore are both less than 5
         once one side reached 5 the loop ends 
         console.log winner and a statement 
+
+Remove the logic that plays a certain number of rounds
+
+create buttons for each selection on the html play
+    add event listener to each button
+        have the click even run the playRound function with the correct player selection every time the button is clicked. 
