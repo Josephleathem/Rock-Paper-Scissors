@@ -29,10 +29,10 @@ function playGame() {
         paperButton.disabled = true;
         scissorsButton.disabled = true;
 
-            if (humanScore === 5) {
+            if (humanScore === 3) {
                 let gameResult = `You won the game ${humanScore} to ${computerScore}, with ${tiedGames} tied rounds!!`
                 document.getElementById("gameResult").innerHTML = gameResult;
-            } else if (computerScore === 5) {
+            } else if (computerScore === 3) {
                 let gameResult = `You lost the game ${computerScore} to ${humanScore}, with ${tiedGames} tied rounds!`
                 document.getElementById("gameResult").innerHTML = gameResult;
             } 
@@ -85,7 +85,7 @@ function playGame() {
                 document.getElementById("roundScore").innerHTML = roundScore
                 gameCount++
             }
-            if (humanScore === 5 || computerScore === 5) {
+            if (humanScore === 3 || computerScore === 3) {
                 gameScore();
             }
     }
@@ -103,55 +103,3 @@ function playGame() {
 }
 
 playGame();
-
-
-/////////////////////////////////  ON STEP 4 DISPLAY THE RUNNING SCORE AND ANNOUNCE THE WINNER OF THE GAME ONCE ONE PLATER REACHES 5 POINTS. 
-
-// function announceWinner(winner) {
-//     // Create a new element to display the winner
-//     const winnerAnnouncement = document.createElement("p");
-//     winnerAnnouncement.textContent = `${winner} has won the game!`;
-//     winnerAnnouncement.classList.add("winner-announcement");
-
-//     // Append the winner announcement to the DOM
-//     document.body.appendChild(winnerAnnouncement);
-
-//     // Disable the game buttons
-//     const rockButton = document.getElementById("rockButton");
-//     const paperButton = document.getElementById("paperButton");
-//     const scissorsButton = document.getElementById("scissorsButton");   
-
-//     rockButton.disabled = true;
-//     paperButton.disabled = true;
-//     scissorsButton.disabled = true;
-// }
-
-//             // Check if either player has reached 5 points
-//             if (humanScore === 5) {
-//                 announceWinner("You");
-//             } else if (computerScore === 5) {
-//                 announceWinner("The Computer");
-//             }
-    
-
-
-// function gameScore() {
-// // Disable the game buttons
-// const rockButton = document.getElementById("rockButton");
-// const paperButton = document.getElementById("paperButton");
-// const scissorsButton = document.getElementById("scissorsButton");   
-
-// rockButton.disabled = true;
-// paperButton.disabled = true;
-// scissorsButton.disabled = true;
-    
-//     if (humanScore === 5) {
-//         console.log(`You won the game ${humanScore} to ${computerScore}, with ${tiedGames} tied rounds!!`)
-//         let gameResult = `You won the game ${humanScore} to ${computerScore}, with ${tiedGames} tied rounds!!`
-//         document.getElementById("gameResult").innerHTML = gameResult;
-//     } else if (computerScore === 5) {
-//         console.log(`You lost the game ${computerScore} to ${humanScore}, with ${tiedGames} tied rounds!`)
-//         let gameResult = `You lost the game ${computerScore} to ${humanScore}, with ${tiedGames} tied rounds!`
-//         document.getElementById("gameResult").innerHTML = gameResult;
-//     } 
-// }
