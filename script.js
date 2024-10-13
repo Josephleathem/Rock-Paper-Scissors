@@ -16,6 +16,27 @@ function getComputerChoice() {
 function playGame() {
     let humanScore = 0;
     let computerScore = 0;
+    let gameCount = 0;
+    let tiedGames = 0;
+
+    function gameScore() {
+        // Disable the game buttons
+        const rockButton = document.getElementById("rockButton");
+        const paperButton = document.getElementById("paperButton");
+        const scissorsButton = document.getElementById("scissorsButton");   
+        
+        rockButton.disabled = true;
+        paperButton.disabled = true;
+        scissorsButton.disabled = true;
+
+            if (humanScore === 5) {
+                let gameResult = `You won the game ${humanScore} to ${computerScore}, with ${tiedGames} tied rounds!!`
+                document.getElementById("gameResult").innerHTML = gameResult;
+            } else if (computerScore === 5) {
+                let gameResult = `You lost the game ${computerScore} to ${humanScore}, with ${tiedGames} tied rounds!`
+                document.getElementById("gameResult").innerHTML = gameResult;
+            } 
+        }
 
     function playRound(playerSelection) {
         const computerSelection = getComputerChoice();
@@ -31,6 +52,7 @@ function playGame() {
                     Human: ${humanScore}
                     Computer: ${computerScore}`;
                 document.getElementById("roundScore").innerHTML = roundScore
+                tiedGames++
             } else {
                 if (playerSelection == 'paper' && computerSelection == 'rock') {
                     let result = `You Win This Round! ${playerSelection} beats ${computerSelection}!`;
@@ -61,6 +83,10 @@ function playGame() {
                     Human: ${humanScore}
                     Computer: ${computerScore}`;
                 document.getElementById("roundScore").innerHTML = roundScore
+                gameCount++
+            }
+            if (humanScore === 5 || computerScore === 5) {
+                gameScore();
             }
     }
 
